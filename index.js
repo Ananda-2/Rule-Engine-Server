@@ -2,6 +2,7 @@ require("dotenv").config() ;
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const serverless = require('serverless-http');
 const cors = require("cors");
 
 
@@ -222,3 +223,5 @@ const PORT = 5000 || process.env.port;
 app.listen(PORT, () => {
   console.log(`Server started on http://localhost:${PORT}`);
 });
+
+module.exports.handler = serverless(app);

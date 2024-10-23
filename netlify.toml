@@ -1,0 +1,7 @@
+[build]
+  functions = "/"
+  publish = "public"  # You can adjust this if you have a React app, for example
+
+[dev]
+  command = "npm start"
+  functions = "netlify/functions"
