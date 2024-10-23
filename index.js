@@ -218,7 +218,7 @@ app.put("/modify_rule/:id", async (req, res) => {
 });
 
 // Server start
-const PORT = 5000;
+const PORT = 5000 || process.env.port;
 app.listen(PORT, () => {
   console.log(`Server started on http://localhost:${PORT}`);
 });
